@@ -81,6 +81,10 @@
         color: white;
         transform: rotateY(180deg);
       }
+      .img{
+        width: 540px;
+        height: 540px;
+      }
 
       #boton{
         font-family: "Helvetica", "Arial", sans-serif;
@@ -202,18 +206,18 @@
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img
+            <img class="img"
               src="http://www.mitaddelmundo.gob.ec/images/recomendado/imagen_2022-03-08_090844.png"
               alt="Avatar"
-              style="width: 540px; height: 540px"
+              
             />
           </div>
           <div class="flip-card-back">
             <button class="bubbly-button"><a id="boton" href="https://www.facebook.com/mitaddelmundoecuador/photos/a.632393050114733/5045090452178282" target="_blank"> Haz clic aquí!</a></button>
-            <img
+            <img class="img"
               src="http://www.mitaddelmundo.gob.ec/images/recomendado/imagen_2022-03-08_102207.png"
               alt="Avatar"
-              style="width: 540px; height: 540px"
+              
             />
           </div>
         </div>
@@ -247,3 +251,30 @@
     document.getElementById("remove").style.display = "none";
   };
 </script>
+
+<style>
+  @media only screen and (min-width: 0px) and (max-width: 390px) {
+    .img, .flip-card{
+        width: 270px;
+        height: 270px;
+      }
+    .content{
+      left: 15%;
+    }
+    .bubbly-button {
+      top:-250px;
+      left:-110px;
+      height: 25px;
+      width:125px;;
+
+    }
+    #boton{
+        font-size: 12px;
+        text-align: center;
+        position: absolute;
+        width: 100px;
+        left: 10%;
+        top: 6px;
+      }
+  }
+</style>
